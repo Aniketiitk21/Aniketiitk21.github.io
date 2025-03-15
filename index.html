@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>John Doe | Undergraduate Portfolio</title>
+  <title>Sandhan Aniket Ramdas | Resume</title>
   <style>
-    /* Basic styling for layout and typography */
     body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
       background: #f4f4f4;
       color: #333;
     }
@@ -26,6 +25,7 @@
       justify-content: center;
       padding: 0;
       margin: 0;
+      flex-wrap: wrap;
     }
     nav ul li {
       margin: 0 1rem;
@@ -36,17 +36,26 @@
     }
     .container {
       max-width: 960px;
-      margin: auto;
-      padding: 2rem;
+      margin: 2rem auto;
       background: #fff;
+      padding: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.5rem;
     }
     section {
       margin-bottom: 2rem;
     }
-    .section-title {
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.5rem;
+    ul {
+      padding-left: 1.5rem;
+    }
+    .project, .experience {
       margin-bottom: 1rem;
+    }
+    .small {
+      font-size: 0.9rem;
+      color: #555;
     }
     a {
       color: #0066cc;
@@ -55,81 +64,187 @@
 </head>
 <body>
   <header>
-    <h1>John Doe</h1>
-    <p>Undergraduate Student in Computer Science</p>
+    <h1>Sandhan Aniket Ramdas</h1>
+    <p>Final Year Undergraduate, Department of Chemistry, IIT Kanpur</p>
+    <p>Email: <a href="mailto:sandhanar21@iitk.ac.in">sandhanar21@iitk.ac.in</a> | Phone: +91-9373512527</p>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#experience">Work Experience</a></li>
+        <li><a href="#projects">Key Projects</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#responsibility">Positions</a></li>
+        <li><a href="#extracurricular">Extra-Curricular</a></li>
+        <li><a href="#contact">Contact & Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- Home Section -->
-    <section id="home">
-      <h2 class="section-title">Home</h2>
-      <p>Welcome to my personal website. Here you'll find information about my academic journey, projects, and interests.</p>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <p>Hello! I'm John Doe, a Computer Science undergraduate at [University Name]. I enjoy solving problems through coding, exploring new technologies, and working on innovative projects. This website serves as my online portfolio where I share my academic achievements, projects, and extracurricular interests.</p>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-      <h2 class="section-title">Education</h2>
+  <div class="container">
+    <!-- Academic Qualifications -->
+    <section id="academics">
+      <h2>Academic Qualifications</h2>
       <ul>
-        <li>
-          <strong>Bachelor of Science in Computer Science</strong><br>
-          [University Name], [City, State/Country]<br>
-          Expected Graduation: 202X
-        </li>
-        <li>
-          <strong>High School Diploma</strong><br>
-          [High School Name], [City, State/Country]<br>
-          Graduated: 20XX
-        </li>
+        <li><strong>2021-Present:</strong> BS Chemistry, Indian Institute of Technology Kanpur (CPI: 6.2/10)</li>
+        <li><strong>2021:</strong> HSC (XII), Matoshri Education Society, Nashik (92.33%)</li>
+        <li><strong>2019:</strong> SSC (X), K. N. Kela High School, Nashik (89.2%)</li>
       </ul>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Work Experience -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <h3>Data Science Intern | MooRakshak Biosciences <span class="small">(Jun’24 – Jul’24)</span></h3>
+        <p><em>Received Letter of Recommendation for excellent performance</em></p>
+        <p><strong>Objective:</strong> Develop an automated pipeline to detect cattle & estimate weight using YOLOv8.</p>
+        <ul>
+          <li>Pre-processed and converted datasets from COCO to YOLO format using AWS S3 for scalable storage.</li>
+          <li>Automated bounding box annotations for cow and buffalo using Grounding DINO & Segment Anything Model.</li>
+          <li>Trained YOLOv8n for cattle detection and YOLOv8n-pose for keypoint detection on side & rear images.</li>
+          <li>Developed scripts for body metrics and weight calculation with model ensemble techniques and confidence checks.</li>
+          <li>Integrated models into a Flask REST API on AWS EC2 for real-time processing.</li>
+        </ul>
+        <p><strong>Impact:</strong> Achieved high precision and recall (e.g., 95.8% precision & 100% recall for buffalo detection; 85.5% precision & 94.7% recall for cow detection; 99.9% precision in keypoint detection).</p>
+      </div>
+    </section>
+
+    <!-- Key Projects -->
     <section id="projects">
-      <h2 class="section-title">Projects</h2>
+      <h2>Key Projects</h2>
+      
+      <div class="project">
+        <h3>Speech Model Analysis: Robustness and Retrieval <span class="small">(Jan’24 – Apr’24)</span></h3>
+        <p><strong>Mentor:</strong> Prof. Vipul Arora, Department of Electrical Engineering, IIT Kanpur</p>
+        <ul>
+          <li><strong>Objective:</strong> Analyze and benchmark speech models (HuBERT, VQ-Wav2Vec, Wav2Vec2.0, WavLM) on the LibriSpeech dataset with diverse noise levels.</li>
+          <li><strong>Approach:</strong> Tested models on 1000+ audio samples with varying SNR (0–25), analyzed performance in different reverberation conditions, and applied K-means clustering and masking techniques.</li>
+          <li><strong>Impact:</strong> Identified WavLM as the top-performing model.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Denoising and Feature Analysis of AFM Images <span class="small">(Jan’24 – Ongoing)</span></h3>
+        <p><strong>Mentor:</strong> Prof. Tushar Sandhan, Department of Electrical Engineering</p>
+        <ul>
+          <li><strong>Objective:</strong> Enhance AFM images via advanced denoising and feature extraction techniques.</li>
+          <li><strong>Approach:</strong> Applied FastNlMeansDenoising, Fourier transform methods, Block Matching & 3D Filtering, bilateral filtering, and self-supervised models (Noise2Void, Noise2Self); used CNN-based (UNet, REDNet, etc.) and transformer-based (Restormer, Uformer) architectures, plus edge and segmentation techniques.</li>
+          <li><strong>Impact:</strong> Achieved MSE of 33.75, MAE of 5.81, PSNR of 30.58 dB, and SSIM of 0.79.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Uber Data Analysis <span class="small">(Nov’23 – Dec’23)</span></h3>
+        <ul>
+          <li><strong>Objective:</strong> Analyze NYC Uber pickups to characterize demand and estimate revenue.</li>
+          <li><strong>Approach:</strong> Processed and cleaned 31M+ trips; performed time series analysis and generated 50+ visualizations to capture demand patterns and seasonal impacts.</li>
+          <li><strong>Impact:</strong> Revealed 84% market growth with a gross margin of $149 million.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Online Payment Fraud Detection <span class="small">(Jul’24)</span></h3>
+        <ul>
+          <li><strong>Objective:</strong> Detect fraudulent transactions using Python (NumPy, Pandas) and machine learning.</li>
+          <li><strong>Approach:</strong> Trained a Decision Tree classifier with sklearn and visualized data using Plotly Express and Matplotlib.</li>
+          <li><strong>Impact:</strong> Achieved 99% accuracy in fraud detection.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Pairs Trading Strategy <span class="small">(Aug’24)</span></h3>
+        <ul>
+          <li><strong>Objective:</strong> Design a quantitative, market-neutral trading strategy for Indian stocks.</li>
+          <li><strong>Approach:</strong> Analyzed 6 years of closing prices using yfinance, pandas, and statsmodels; applied cointegration and regression for hedge ratio estimation.</li>
+          <li><strong>Impact:</strong> Developed a strategy that improves risk management and profitability.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Causal Inference Methods for Business Analytics <span class="small">(Aug’24 – Nov’24)</span></h3>
+        <ul>
+          <li><strong>Objective:</strong> Analyze the causal effects of economic policies using econometric models.</li>
+          <li><strong>Approach:</strong> Performed Difference-in-Differences and event study analyses; used regression and instrumental variable techniques to assess policy impacts.</li>
+          <li><strong>Impact:</strong> Generated actionable insights for evidence-based decision making.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h3>Deep Fake Image Detection <span class="small">(Aug’24 – Nov’24)</span></h3>
+        <p><strong>Mentor:</strong> Prof. Koteswar Rao Jerripothula, Department of Electrical Engineering</p>
+        <ul>
+          <li><strong>Objective:</strong> Develop a system to detect and classify deepfake images.</li>
+          <li><strong>Approach:</strong> Compared multiple architectures (ResNet50, VGG16, DenseNet, EfficientNet, ViT), used data augmentation and MTCNN for face detection, and fine-tuned models with ImageNet weights.</li>
+          <li><strong>Impact:</strong> Achieved 95% accuracy with DenseNet and 94% with VGG16.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
       <ul>
-        <li>
-          <strong>Project One:</strong> A brief description of the project, the technologies used, and a link to the project repository or live demo.
-        </li>
-        <li>
-          <strong>Project Two:</strong> A brief description of the project, the technologies used, and a link to the project repository or live demo.
-        </li>
-        <li>
-          <strong>Project Three:</strong> A brief description of the project, the technologies used, and a link to the project repository or live demo.
-        </li>
+        <li><strong>Programming:</strong> C, C++, Python</li>
+        <li><strong>Libraries:</strong> NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Scikit-image, Plotly, PyTorch, TensorFlow, OpenCV, VTK</li>
+        <li><strong>Database:</strong> SQL, NoSQL</li>
+        <li><strong>Software:</strong> MATLAB, Git, GitHub, MS-Excel, Flask, Power BI, Tableau</li>
       </ul>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <p>I have experience with programming languages such as Python, Java, C++, and JavaScript. I am also skilled in web development, data analysis, and have a basic understanding of machine learning techniques.</p>
+    <!-- Relevant Courses -->
+    <section id="courses">
+      <h2>Relevant Courses</h2>
+      <ul>
+        <li>Fundamentals of Computing, Introduction to Machine Learning, Introduction to Economics</li>
+        <li>Data Structures and Algorithms, Applied Probability and Statistics, Linear Algebra & ODE</li>
+        <li>Causal Inference Methods for Business Analytics, Advanced Statistical Methods, Big Data Visual Analytics</li>
+        <li>Image Processing, Computer Vision and Deep Learning</li>
+      </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <p>If you'd like to get in touch, please email me at <a href="mailto:john.doe@example.com">john.doe@example.com</a> or connect with me on LinkedIn.</p>
+    <!-- Position of Responsibility -->
+    <section id="responsibility">
+      <h2>Position of Responsibility</h2>
+      <h3>Secretary | Hindi Sahitya Sabha, IIT Kanpur <span class="small">(Apr’22 – Apr’23)</span></h3>
+      <ul>
+        <li><strong>Initiatives:</strong> Organized a National Level Story Writing Competition with 100+ participants from 70+ reputed colleges; facilitated a Kavyanjali evening at MnC Council’s Alfaaz event with 150+ attendees.</li>
+        <li><strong>Impact:</strong> Pioneered an Independence Day podcast (4K views) and coordinated a Kavi Sammelan with a budget of 5+ lakhs, attracting 1200+ participants.</li>
+      </ul>
     </section>
-  </main>
+
+    <!-- Extra-Curricular -->
+    <section id="extracurricular">
+      <h2>Extra-Curricular</h2>
+      <ul>
+        <li><strong>Social:</strong> Volunteer at Prayas (improving education for underprivileged students) and conducted 10+ Music Yoga sessions on campus.</li>
+        <li><strong>Cultural:</strong> Won Bronze Medal in Sansadiya Vaad-Vivaad at Hindi Pakhwada; performed in a Janmashthami play with Bhaktivedanta Club, attracting 1000+ audience.</li>
+      </ul>
+    </section>
+
+    <!-- Contact & Links -->
+    <section id="contact">
+      <h2>Contact & Links</h2>
+      <ul>
+        <li>Email: <a href="mailto:sandhanar21@iitk.ac.in">sandhanar21@iitk.ac.in</a></li>
+        <li>GitHub: <a href="https://github.com/Aniketiitk21" target="_blank">github.com/Aniketiitk21</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/aniket-sandhan-2b8020242/" target="_blank">linkedin.com/in/aniket-sandhan-2b8020242</a></li>
+        <li>Projects:
+          <ul>
+            <li><a href="https://github.com/Aniketiitk21/AUDIO_MODEL_ANALYSIS_AND_SUBSEQUENCE_SEARCH.git" target="_blank">Audio Model Analysis</a></li>
+            <li><a href="https://github.com/Aniketiitk21/AFM_IMAGE_DENOISING.git" target="_blank">AFM Image Denoising</a></li>
+            <li><a href="https://github.com/Aniketiitk21/Uber-Data-Analysis-Project.git" target="_blank">Uber Data Analysis</a></li>
+            <li><a href="https://github.com/Aniketiitk21/Deep-Fake-Detection.git" target="_blank">Deep Fake Detection</a></li>
+            <li><a href="https://github.com/Aniketiitk21/Pairs-Trading-strategy.git" target="_blank">Pairs Trading Strategy</a></li>
+            <li><a href="https://github.com/Aniketiitk21/MBA753M.git" target="_blank">MBA753M - Causal Inference Methods</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+    <p>&copy; 2025 Sandhan Aniket Ramdas. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
